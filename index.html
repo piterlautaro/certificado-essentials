@@ -6,11 +6,88 @@
 </head>
 <body>
 	<style>
+		:root{
+			--numero: 1.2;
+
+			--out-width: calc(769px * var(--numero));
+			--out-height: calc(595px * var(--numero));
+
+			--in-width: calc(616px * var(--numero));
+			--in-height: calc(480px * var(--numero));
+			--in-top: calc(58px * var(--numero));
+			--in-left: calc(78px * var(--numero));
+
+			--certificate-width: calc(571px * var(--numero));
+			--certificate-height: calc(434px * var(--numero));
+			--certificate-top: calc(22px * var(--numero));
+			--certificate-left: calc(21px * var(--numero));
+
+			--certificate-detail-width: calc(382px * var(--numero));
+			--certificate-detail-height: calc(100%);
+			--certificate-detail-left: calc(188px * var(--numero));
+
+			--banner-width: calc(188px * var(--numero));
+			--banner-width: calc(434px * var(--numero));
+
+			--head-top: calc(-433px * var(--numero));
+			--head-left: calc(188px * var(--numero));
+			--head-width: calc(382px * var(--numero));
+
+			--body-1-top: calc(-433px * var(--numero));
+			--body-1-left: calc(188px * var(--numero));
+			--body-1-width: calc(100px * var(--numero));
+
+			--body-1-padding-width: calc(41px * var(--numero));
+
+			--head-line: calc(30px * var(--numero));
+
+			--icon-height: calc(62px * var(--numero));
+			--icon-end-height: calc(73px * var(--numero));
+
+			--body-2-top: calc(-433px * var(--numero));
+			--body-2-left: calc(188px * var(--numero));
+			--body-2-width: calc(100px * var(--numero));
+
+			--body-2-padding-width: calc(91px * var(--numero));
+
+			--box-width: calc(50px * var(--numero));
+			--box-height: calc(50px * var(--numero));
+
+			--box-1-top: calc(30px * var(--numero));
+			--box-1-left: calc(48px * var(--numero));
+
+			--box-2-top: calc(30px * var(--numero));
+			--box-2-left: calc(670px * var(--numero));
+
+			--box-3-top: calc(515px * var(--numero));
+			--box-3-left: calc(670px * var(--numero));
+
+			--box-4-top: calc(515px * var(--numero));
+			--box-4-left: calc(48px * var(--numero));
+
+			--name-top: calc(12px * var(--numero));
+
+			--head-name-icon-width: calc(30px * var(--numero));
+			--head-name-icon-height: calc(50px * var(--numero));
+
+			--name-img-width: calc(20px * var(--numero));
+			--name-width: calc(300px * var(--numero));
+
+			--name-padding-width: calc(10px * var(--numero));
+
+			--super-width: calc(305px * var(--numero));
+			--super-height: calc(20px * var(--numero));
+			--super-top: calc(133px * var(--numero));
+			--super-left: calc(326px * var(--numero));
+
+			--icon-social-width: calc(45px * var(--numero));
+
+		}
 		*{
 			margin: 0;
 			padding: 0;
 			font-family: 'Century Gothic';
-			font-size: 10px;
+			font-size: 12px;
 			color: #1C1F3E;
 			font-weight: bold;
 		}
@@ -18,113 +95,113 @@
 			outline: 1px solid black;
 		}*/
 		#out{
-			width: 769px;
-			height: 595px;
+			width: var(--out-width);
+			height: var(--out-height);
 			z-index: 1;
 		}
 		#in{
 			position: relative;
-			width: 616px;
-			height: 480px;
-			top: 58px;
-			left: 78px;
+			width: var(--in-width);
+			height: var(--in-height);
+			top: var(--in-top);
+			left: var(--in-left);
 			z-index: 3;
 			background-color: white;
 		}
 		#certificate{
 			position: relative;
-			width: 571px;
-			height: 434px;
-			top: 22px;
-			left: 21px;
+			width: var(--certificate-width);
+			height: var(--certificate-height);
+			top: var(--certificate-top);
+			left: var(--certificate-left);
 			z-index: 4;
 		}
 		#banner-side{
 			position: relative;
-			height: 434px;
-			width: 188px;
+			height: var(--banner-height);
+			width: var(--banner-width);
 		}
 		#certificate-detail{
 			position: absolute;
-			width: 382px;
-			height: 100%;
+			width: var(--certificate-detail-width);
+			height: var(--vcertificate-detail-height);
 			top: 0;
-			left: 188px;
+			left: var(--certificate-detail-left);
 		}
 		#head{
-			left: 188px;
-			top: -434px;
+			left: var(--head-left);
+			top: var(--head-top);
 		}
 		.head{
-			width: 382px;
+			width: var(--head-width);
 			text-align: center;
 		}
 		#body-1{
 			position: relative;
 			border-collapse: collapse;
-			top: -432px;
-			left: 188px;
+			top: var(--body-1-top);
+			left: var(--body-1-left);
 		}
 		.body-1{
 			text-align: center;
-			width: 100px;
+			width: var(--body-1-width);
 		}
 		.body-1-padding{
-			width: 41px;
+			width: var(--body-1-padding-width);
 		}
 		.head{
-			line-height: 30px;
+			line-height: var(--head-line);
 		}
 		#head, .head{
 			position: relative;
 			border-collapse: collapse;
 		}
 		.icon{
-			height: 62px;
+			height: var(--icon-height);
 		}
 		.icon-end{
-			height: 73px;
+			height: var(--icon-end-height);
 		}
 		#body-2{
 			position: relative;
 			border-collapse: collapse;
-			left: 188px;
-			top: -431px;
+			left: var(--body-2-left);
+			top: var(--body-2-top);
 		}
 		.body-2{
 			text-align: center;
-			width: 100px;
+			width: var(--body-2-width);
 		}		
 		.body-2-padding{
-			width: 91px;
+			width: var(--body-2-padding-width);
 		}
 		.box{
 			z-index: 2;
 			position: absolute;
-			height: 50px;
-			width: 50px;
+			height: var(--box-height);
+			width: var(--box-width);
 		}
 		#box-1{
-			top: 30px;
-			left: 48px;
+			top: var(--box-1-top);
+			left: var(--box-1-left);
 			border-right: 1px solid red;
 			border-bottom: 1px solid red;
 		}
 		#box-2{
-			top: 30px;
-			left: 670px;
+			top: var(--box-2-top);
+			left: var(--box-2-left);
 			border-left: 1px solid red;
 			border-bottom: 1px solid red;
 		}
 		#box-3{
-			top: 515px;
-			left: 670px;
+			top: var(--box-3-top);
+			left: var(--box-3-left);
 			border-top: 1px solid red;
 			border-left: 1px solid red;
 		}
 		#box-4{
-			top: 515px;
-			left: 48px;
+			top: var(--box-4-top);
+			left: var(--box-4-left);
 			border-top: 1px solid red;
 			border-right: 1px solid red;
 		}
@@ -133,34 +210,34 @@
 		}
 		#track-name, .img-chile{
 			position: relative;
-			top: 12px;
+			top: var(--name-top)
 		}
 		.head-name-icon{
-			width: 30px;
-			height: 50px;
+			width: var(--head-name-icon-width);
+			height: var(--head-name-icon-height);
 		}
 		.img-chile{
-			width: 20px;
+			width: var(--name-img-width);
 		}
 		#track-name{
-			width: 300px;
+			width: var(--name-width);
 		}
 		.name-padding{
-			width: 10px;
+			width: var(--name-padding-width);
 		}
 		#super-usuario{
 			position: absolute;
 			text-align: center;
-			width: 305px;
-			height: 20px;
-			top: 133px;
-			left: 326px;
+			width: var(--super-width);
+			height: var(--super-height);
+			top: var(--super-top);
+			left: var(--super-left);
 			z-index: 9;
 			color: black;
 			font-size: 15px;
 		}
 		.icon-social{
-			width: 45px;
+			width: var(--icon-social-width);
 		}
 	</style>
 	<h4 id="super-usuario">
@@ -170,7 +247,7 @@
 		<div id="in">
 			<div id="certificate">
 				<div id="banner-side">
-					<img src="./img/banner.png" alt="">
+					<img src="./img/banner.png" style="width: 226px">
 				</div>
 				<table id="certificate-detail">
 					<table id="head">
@@ -195,7 +272,7 @@
 						</tr>
 						<tr>
 							<td class="head" colspan="5">
-								<h3 style="color: #DFB052;font-family: 'Arial Black';font-size: 15px">LA COLECCIÓN DE INNOVACIÓN SOCIAL:</h3>
+								<h3 style="color: #DFB052;font-family: 'Arial Black';font-size: 17px">LA COLECCIÓN DE INNOVACIÓN SOCIAL:</h3>
 							</td>
 						</tr>
 					</table>
@@ -235,8 +312,11 @@
 					</table>
 					<table id="body-2">
 						<tr>
+							<td style="height: 20px"></td>
+						</tr>
+						<tr>
 							<td class="body-2-padding"></td>
-							<td class="body-2 icon">
+							<td class="body-2 icon" style="text-align: center !important;">
 								<img src="./img/impact.png" class="icon-social" alt="">
 							</td>
 							<td class="body-2 icon">
@@ -263,7 +343,7 @@
 							<td class="body-2-padding"></td>
 							<td class="body-2 icon-end">Firma</td>
 							<td class="body-2 icon-end">
-								<img src="./img/socialab.png" alt="">
+								<img src="./img/socialab.png" style="padding-bottom: 30px" alt="">
 							</td>
 							<td class="body-2-padding"></td>
 						</tr>
