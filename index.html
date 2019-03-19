@@ -3,179 +3,278 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Certificado Essentials</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 	<style>
-		:root{
-			--box: 50px;
-		}
-		#detalle div{
-			line-height: 37px;
-			text-align: center;
-		}
-		.col-md-9{
-			margin-left: 35px;
-		}
-		.col-md-4, .col-md-6{
-			text-align: center;
-		}
-		#body .col-md-9{
-			margin-top: 25px;
-		}
-		#name{
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Century Gothic';
+			font-size: 10px;
+			color: #1C1F3E;
 			font-weight: bold;
-			line-height: 30px;
-			margin-bottom: 0;
 		}
-		.detail-text{
-			line-height: 7px;
-			font-size: 12px;
+		/*#out, #in, #certificate, table, td{
+			outline: 1px solid black;
+		}*/
+		#out{
+			width: 769px;
+			height: 595px;
+			z-index: 1;
 		}
-		#contenedor{
-			margin: 70px;
-		}
-		#box-1, #box-2, #box-3, #box-4{
-			position: absolute;
-			width: var(--box);
-			height: var(--box);
-			z-index: 90;
-		}
-		#box-1{
-			border-right: 1px solid red;
-			border-bottom: 1px solid red;
-			top: 19px;
-			left: 35px;
-		}
-		#box-2{
-			border-top: 1px solid red;
-			border-right: 1px solid red;
-			top: 605px;
-			left: 35px;
-		}
-		#box-3{
-			border-left: 1px solid red;
-			border-bottom: 1px solid red;
-			left: 1130px;
-			top: 19px;
-		}
-		#box-4{
-			border-top: 1px solid red;
-			border-left: 1px solid red;
-			left: 1130px;
-			top: 605px;
-		}
-		#big-box{
-			position: absolute;
-			/*outline: 1px solid black;*/
-			top: 54px;
-			z-index: 95;
-			width: 1070px;
-			height: 565px;
+		#in{
+			position: relative;
+			width: 616px;
+			height: 480px;
+			top: 58px;
+			left: 78px;
+			z-index: 3;
 			background-color: white;
 		}
+		#certificate{
+			position: relative;
+			width: 571px;
+			height: 434px;
+			top: 22px;
+			left: 21px;
+			z-index: 4;
+		}
+		#banner-side{
+			position: relative;
+			height: 434px;
+			width: 188px;
+		}
+		#certificate-detail{
+			position: absolute;
+			width: 382px;
+			height: 100%;
+			top: 0;
+			left: 188px;
+		}
+		#head{
+			left: 188px;
+			top: -434px;
+		}
+		.head{
+			width: 382px;
+			text-align: center;
+		}
+		#body-1{
+			position: relative;
+			border-collapse: collapse;
+			top: -432px;
+			left: 188px;
+		}
+		.body-1{
+			text-align: center;
+			width: 100px;
+		}
+		.body-1-padding{
+			width: 41px;
+		}
+		.head{
+			line-height: 30px;
+		}
+		#head, .head{
+			position: relative;
+			border-collapse: collapse;
+		}
+		.icon{
+			height: 62px;
+		}
+		.icon-end{
+			height: 73px;
+		}
+		#body-2{
+			position: relative;
+			border-collapse: collapse;
+			left: 188px;
+			top: -431px;
+		}
+		.body-2{
+			text-align: center;
+			width: 100px;
+		}		
+		.body-2-padding{
+			width: 91px;
+		}
+		.box{
+			z-index: 2;
+			position: absolute;
+			height: 50px;
+			width: 50px;
+		}
+		#box-1{
+			top: 30px;
+			left: 48px;
+			border-right: 1px solid red;
+			border-bottom: 1px solid red;
+		}
+		#box-2{
+			top: 30px;
+			left: 670px;
+			border-left: 1px solid red;
+			border-bottom: 1px solid red;
+		}
+		#box-3{
+			top: 515px;
+			left: 670px;
+			border-top: 1px solid red;
+			border-left: 1px solid red;
+		}
+		#box-4{
+			top: 515px;
+			left: 48px;
+			border-top: 1px solid red;
+			border-right: 1px solid red;
+		}
+		.head-name, .head-name-icon, .name-padding{
+			text-align: center;
+		}
+		#track-name, .img-chile{
+			position: relative;
+			top: 12px;
+		}
+		.head-name-icon{
+			width: 30px;
+			height: 50px;
+		}
+		.img-chile{
+			width: 20px;
+		}
+		#track-name{
+			width: 300px;
+		}
+		.name-padding{
+			width: 10px;
+		}
+		#super-usuario{
+			position: absolute;
+			text-align: center;
+			width: 305px;
+			height: 20px;
+			top: 133px;
+			left: 326px;
+			z-index: 9;
+			color: black;
+			font-size: 15px;
+		}
+		.icon-social{
+			width: 45px;
+		}
 	</style>
-	<div class="row" id="contenedor">
-		<div id="box-1"></div>
-		<div id="box-2"></div>
-		<div id="box-3"></div>
-		<div id="box-4"></div>
-		<div id="big-box"></div>
-		<div class="col-md-2" style="z-index: 99">
-			<img src="img/certificate-side.png" alt="certificate-side">
+	<h4 id="super-usuario">
+		USUARIO DE EJEMPLO
+	</h4>
+	<div id="out">
+		<div id="in">
+			<div id="certificate">
+				<div id="banner-side">
+					<img src="./img/banner.png" alt="">
+				</div>
+				<table id="certificate-detail">
+					<table id="head">
+						<tr>
+							<td class="head" colspan="5">Otorgado a:</td>
+						</tr>
+						<tr>
+							<td class="name-padding"></td>
+							<td class="head-name-icon" style="text-align: right !important;">
+								<img src="./img/misselanius.png" class="img-chile" alt="">
+							</td>
+							<td class="head-name">
+								<img src="./img/track_name.png" id="track-name" alt="">
+							</td>
+							<td class="head-name-icon" style="text-align: left !important">
+								<img src="./img/misselanius.png" class="img-chile" alt="">
+							</td>
+							<td class="name-padding"></td>
+						</tr>
+						<tr>
+							<td class="head" colspan="5">Por completar con éxito</td>
+						</tr>
+						<tr>
+							<td class="head" colspan="5">
+								<h3 style="color: #DFB052;font-family: 'Arial Black';font-size: 15px">LA COLECCIÓN DE INNOVACIÓN SOCIAL:</h3>
+							</td>
+						</tr>
+					</table>
+					<table id="body-1">
+						<tr>
+							<td class="body-1-padding"></td>
+							<td class="body-1 icon">
+								<img src="./img/group.png" class="icon-social" alt="">
+							</td>
+							<td class="body-1 icon">
+								<img src="./img/idea.png" class="icon-social" alt="">
+							</td>
+							<td class="body-1 icon">
+								<img src="./img/question.png" class="icon-social" alt="">
+							</td>
+							<td class="body-1-padding"></td>
+						</tr>
+						<tr>
+							<td class="body-1-padding"></td>
+							<td class="body-1">
+								<p>Colaboración</p>
+								<p>para la</p>
+								<p>transformación.</p>
+							</td>
+							<td class="body-1">
+								<p>Desde una idea</p>
+								<p>a un emprendimiento</p>
+								<p>con impacto.</p>
+							</td>
+							<td class="body-1">
+								<p>¿Qué es y</p>
+								<p>como ser una</p>
+								<p>empresa B?</p>
+							</td>
+							<td class="body-1-padding"></td>
+						</tr>
+					</table>
+					<table id="body-2">
+						<tr>
+							<td class="body-2-padding"></td>
+							<td class="body-2 icon">
+								<img src="./img/impact.png" class="icon-social" alt="">
+							</td>
+							<td class="body-2 icon">
+								<img src="./img/company.png" class="icon-social" alt="">
+							</td>
+							<td class="body-2-padding"></td>
+						</tr>
+						<tr>
+							<td class="body-2-padding"></td>
+							<td class="body-2">
+								<p>Generando</p>
+								<p>un movimiento</p>
+								<p>con impacto.</p>
+							</td>
+							<td class="body-2">
+								<p>Desde el modelo</p>
+								<p>tradicional a</p>
+								<p>una empresa</p>
+								<p>con sentido.</p>
+							</td>
+							<td class="body-2-padding"></td>
+						</tr>
+						<tr>
+							<td class="body-2-padding"></td>
+							<td class="body-2 icon-end">Firma</td>
+							<td class="body-2 icon-end">
+								<img src="./img/socialab.png" alt="">
+							</td>
+							<td class="body-2-padding"></td>
+						</tr>
+					</table>
+				</table>
+			</div>
 		</div>
-		<div class="col-md-9" id="detalle" style="z-index: 99">
-			<div class="col-md-9" style="text-align: center;">
-				<img src="titles/otorgado.png" alt="">
-			</div>
-			<div class="col-md-9">
-				<div class="col-md-1">
-					<img src="titles/misselanius.png" alt="">
-				</div>
-				<div class="col-md-10">
-					<p class="col-md-12" id="name" style="">Juanito Pérez Sevilla de las mercedes</p>
-					<img src="titles/track_name.png" class="col-md-12">
-				</div>
-				<div class="col-md-1">
-					<img src="titles/misselanius.png" alt="">
-				</div>
-			</div>
-			<div class="col-md-9" style="text-align: center;">
-				<img src="titles/complete_success.png" alt="">
-			</div>
-			<div class="col-md-9">
-				<img src="titles/innno.png" alt="">
-			</div>
-			<div id="body">
-				<div class="col-md-9">
-				<div class="col-md-4">
-					<img src="icons/group.png" alt="">
-				</div>
-				<div class="col-md-4">
-					<img src="icons/idea.png" alt="">
-				</div>
-				<div class="col-md-4">
-					<img src="icons/question.png" alt="">
-				</div>
-				</div>
-				<div class="col-md-9">
-					<div class="col-md-4">
-						<p class="detail-text">
-							Colaboración
-						</p>
-						<p class="detail-text">
-							para la
-						</p>
-						<p class="detail-text">
-							transformación.
-						</p>
-						<!-- <img src="text/group-text.png" alt=""> -->
-					</div>
-					<div class="col-md-4">
-						<p class="detail-text">Desde una idea</p>
-						<p class="detail-text">a un emprendimiento</p>
-						<p class="detail-text">con impacto.</p>
-						<!-- <img src="text/idea-text.png" alt=""> -->
-					</div>
-					<div class="col-md-4">
-						<p class="detail-text">¿Qué es y</p>
-						<p class="detail-text">como ser una</p>
-						<p class="detail-text">empresa B?</p>
-						<!-- <img src="text/question-text.png" alt=""> -->
-					</div>
-				</div>
-				<div class="col-md-9">
-					<div class="col-md-3 col-md-offset-3">
-						<img src="icons/impact.png" alt="">
-					</div>
-					<div class="col-md-3">
-						<img src="icons/company.png" alt="">
-					</div>
-				</div>
-				<div class="col-md-9">
-					<div class="col-md-3 col-md-offset-3">
-						<p class="detail-text">Generando</p>
-						<p class="detail-text">un movimiento</p>
-						<p class="detail-text">con impacto.</p>
-						<!-- <img src="text/impact-text.png" alt=""> -->
-					</div>
-					<div class="col-md-3">
-						<p class="detail-text">Desde el modelo</p>
-						<p class="detail-text">tradicional a</p>
-						<p class="detail-text">una empresa</p>
-						<p class="detail-text">con sentido.</p>
-						<!-- <img src="text/company-text.png" alt=""> -->
-					</div>
-				</div>
-				<div class="col-md-9" id="footer">
-					<div class="col-md-3 col-md-offset-3"></div>
-					<div class="col-md-3">
-						<img src="icons/socialab.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="box-1" class="box"></div>
+		<div id="box-2" class="box"></div>
+		<div id="box-3" class="box"></div>
+		<div id="box-4" class="box"></div>
 	</div>
 </body>
 </html>
