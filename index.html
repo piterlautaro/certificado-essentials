@@ -6,81 +6,85 @@
 </head>
 <body>
 	<style>
+		/*#out, #in, #certificate, table, td{
+			outline: 1px solid black;
+		}*/
 		:root{
 			--numero: 1.2;
+			--numero-width: 1.4;
 
-			--out-width: calc(769px * var(--numero));
+			--out-width: calc(769px * var(--numero-width));
 			--out-height: calc(595px * var(--numero));
 
-			--in-width: calc(616px * var(--numero));
+			--in-width: calc(616px * var(--numero-width));
 			--in-height: calc(480px * var(--numero));
 			--in-top: calc(58px * var(--numero));
-			--in-left: calc(78px * var(--numero));
+			--in-left: calc(78px * var(--numero-width));
 
-			--certificate-width: calc(571px * var(--numero));
+			--certificate-width: calc(571px * var(--numero-width));
 			--certificate-height: calc(434px * var(--numero));
 			--certificate-top: calc(22px * var(--numero));
-			--certificate-left: calc(21px * var(--numero));
+			--certificate-left: calc(21px * var(--numero-width));
 
-			--certificate-detail-width: calc(382px * var(--numero));
+			--certificate-detail-width: calc(382px * var(--numero-width));
 			--certificate-detail-height: calc(100%);
 			--certificate-detail-left: calc(188px * var(--numero));
 
-			--banner-width: calc(188px * var(--numero));
-			--banner-width: calc(434px * var(--numero));
+			/*--banner-width: calc(188px * var(--numero));
+			--banner-width: calc(434px * var(--numero));*/
 
-			--head-top: calc(-433px * var(--numero));
-			--head-left: calc(188px * var(--numero));
-			--head-width: calc(382px * var(--numero));
+			--head-top: calc(-435px * var(--numero));
+			--head-left: calc(161px * var(--numero-width));
+			--head-width: calc(410px * var(--numero-width));
 
-			--body-1-top: calc(-433px * var(--numero));
-			--body-1-left: calc(188px * var(--numero));
-			--body-1-width: calc(100px * var(--numero));
+			--body-1-top: calc(-435px * var(--numero));
+			--body-1-left: calc(161px * var(--numero-width));
+			--body-1-width: calc(109px * var(--numero-width));
 
-			--body-1-padding-width: calc(41px * var(--numero));
+			--body-1-padding-width: calc(41px * var(--numero-width));
 
 			--head-line: calc(30px * var(--numero));
 
 			--icon-height: calc(62px * var(--numero));
 			--icon-end-height: calc(73px * var(--numero));
 
-			--body-2-top: calc(-433px * var(--numero));
-			--body-2-left: calc(188px * var(--numero));
-			--body-2-width: calc(100px * var(--numero));
+			--body-2-top: calc(-435px * var(--numero));
+			--body-2-left: calc(161px * var(--numero-width));
+			--body-2-width: calc(113px * var(--numero-width));
 
-			--body-2-padding-width: calc(91px * var(--numero));
+			--body-2-padding-width: calc(91px * var(--numero-width));
 
-			--box-width: calc(50px * var(--numero));
+			--box-width: calc(50px * var(--numero-width));
 			--box-height: calc(50px * var(--numero));
 
 			--box-1-top: calc(30px * var(--numero));
-			--box-1-left: calc(48px * var(--numero));
+			--box-1-left: calc(48px * var(--numero-width));
 
 			--box-2-top: calc(30px * var(--numero));
-			--box-2-left: calc(670px * var(--numero));
+			--box-2-left: calc(670px * var(--numero-width));
 
 			--box-3-top: calc(515px * var(--numero));
-			--box-3-left: calc(670px * var(--numero));
+			--box-3-left: calc(670px * var(--numero-width));
 
 			--box-4-top: calc(515px * var(--numero));
-			--box-4-left: calc(48px * var(--numero));
+			--box-4-left: calc(48px * var(--numero-width));
 
 			--name-top: calc(12px * var(--numero));
 
-			--head-name-icon-width: calc(30px * var(--numero));
+			--head-name-icon-width: calc(30px * var(--numero-width));
 			--head-name-icon-height: calc(50px * var(--numero));
 
-			--name-img-width: calc(20px * var(--numero));
-			--name-width: calc(300px * var(--numero));
+			--name-img-width: calc(22px * var(--numero-width));
+			--name-width: calc(300px * var(--numero-width));
 
-			--name-padding-width: calc(10px * var(--numero));
+			--name-padding-width: calc(10px * var(--numero-width));
 
-			--super-width: calc(305px * var(--numero));
+			--super-width: calc(305px * var(--numero-width));
 			--super-height: calc(20px * var(--numero));
 			--super-top: calc(133px * var(--numero));
-			--super-left: calc(326px * var(--numero));
+			--super-left: calc(326px * var(--numero-width));
 
-			--icon-social-width: calc(45px * var(--numero));
+			--icon-social-width: calc(45px * var(--numero-width));
 
 		}
 		*{
@@ -91,9 +95,6 @@
 			color: #1C1F3E;
 			font-weight: bold;
 		}
-		/*#out, #in, #certificate, table, td{
-			outline: 1px solid black;
-		}*/
 		#out{
 			width: var(--out-width);
 			height: var(--out-height);
