@@ -2,360 +2,236 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Certificado Essentials</title>
+	<title>Test</title>
 </head>
 <body>
 	<style>
-		/*#out, #in, #certificate, table, td, h4{
-			outline: 1px solid black;
-		}*/
-		:root{
-			--numero: 1.2;
-			--numero-width: 1.4;
+		@page {
+            margin: 0;
+        }
+        :root{
+        	--road: 20px;
+        	--width: calc(900px + (var(--road)*3));
+        	--height: calc(574px + (var(--road)*3));
+        	--margin: calc(100px - var(--road));
+        }
+        body{
+        	font-family: 'Century Gothic';
+        	font-weight: bold;
+        }
 
-			--out-width: calc(769px * var(--numero-width));
-			--out-height: calc(595px * var(--numero));
-
-			--in-width: calc(616px * var(--numero-width));
-			--in-height: calc(480px * var(--numero));
-			--in-top: calc(58px * var(--numero));
-			--in-left: calc(78px * var(--numero-width));
-
-			--certificate-width: calc(571px * var(--numero-width));
-			--certificate-height: calc(434px * var(--numero));
-			--certificate-top: calc(22px * var(--numero));
-			--certificate-left: calc(21px * var(--numero-width));
-
-			--certificate-detail-width: calc(382px * var(--numero-width));
-			--certificate-detail-height: calc(100%);
-			--certificate-detail-left: calc(188px * var(--numero));
-
-			/*--banner-width: calc(188px * var(--numero));
-			--banner-width: calc(434px * var(--numero));*/
-
-			--head-top: calc(-435px * var(--numero));
-			--head-left: calc(161px * var(--numero-width));
-			--head-width: calc(410px * var(--numero-width));
-
-			--body-1-top: calc(-435px * var(--numero));
-			--body-1-left: calc(161px * var(--numero-width));
-			--body-1-width: calc(109px * var(--numero-width));
-
-			--body-1-padding-width: calc(41px * var(--numero-width));
-
-			--head-line: calc(30px * var(--numero));
-
-			--icon-height: calc(62px * var(--numero));
-			--icon-end-height: calc(73px * var(--numero));
-
-			--body-2-top: calc(-435px * var(--numero));
-			--body-2-left: calc(161px * var(--numero-width));
-			--body-2-width: calc(113px * var(--numero-width));
-
-			--body-2-padding-width: calc(91px * var(--numero-width));
-
-			--box-width: calc(50px * var(--numero-width));
-			--box-height: calc(50px * var(--numero));
-
-			--box-1-top: calc(30px * var(--numero));
-			--box-1-left: calc(48px * var(--numero-width));
-
-			--box-2-top: calc(30px * var(--numero));
-			--box-2-left: calc(670px * var(--numero-width));
-
-			--box-3-top: calc(515px * var(--numero));
-			--box-3-left: calc(670px * var(--numero-width));
-
-			--box-4-top: calc(515px * var(--numero));
-			--box-4-left: calc(48px * var(--numero-width));
-
-			--name-top: calc(12px * var(--numero));
-
-			--head-name-icon-width: calc(30px * var(--numero-width));
-			--head-name-icon-height: calc(50px * var(--numero));
-
-			--name-img-width: calc(22px * var(--numero-width));
-			--name-width: calc(300px * var(--numero-width));
-
-			--name-padding-width: calc(10px * var(--numero-width));
-
-			--super-width: calc(330px * var(--numero-width));
-			--super-height: calc(20px * var(--numero));
-			--super-top: calc(133px * var(--numero));
-			--super-left: calc(300px * var(--numero-width));
-
-			--icon-social-width: calc(45px * var(--numero-width));
-
-		}
-		*{
-			margin: 0;
-			padding: 0;
-			font-family: 'Century Gothic';
-			font-size: 12px;
-			color: #1C1F3E;
-			font-weight: bold;
-		}
+        /*#out, #in, #banner, #certificado, .header-row, .body-1-data, .body-2-data, .body-3-data, #middle{
+        	outline: 1px solid black;
+        }*/
 		#out{
-			width: var(--out-width);
-			height: var(--out-height);
+			width: 1020px;
+			height: 674px;
+			padding-top: 100px;
+			padding-left: 100px;
 			z-index: 1;
 		}
 		#in{
 			position: relative;
-			width: var(--in-width);
-			height: var(--in-height);
-			top: var(--in-top);
-			left: var(--in-left);
-			z-index: 3;
-			background-color: white;
-		}
-		#certificate{
-			position: relative;
-			width: var(--certificate-width);
-			height: var(--certificate-height);
-			top: var(--certificate-top);
-			left: var(--certificate-left);
+			width: 900px;
+			height: 574px;
 			z-index: 4;
 		}
-		#banner-side{
+		#banner{
 			position: relative;
-			height: var(--banner-height);
-			width: var(--banner-width);
+			height: 574px;
+			width: 250px;
 		}
-		#certificate-detail{
+		#certificado{
 			position: absolute;
-			width: var(--certificate-detail-width);
-			height: var(--vcertificate-detail-height);
-			top: 0;
-			left: var(--certificate-detail-left);
+			top: 0px;
+			left: 250px;
+			width: 650px;
+			height: 574px;
 		}
-		#head{
-			left: var(--head-left);
-			top: var(--head-top);
-		}
-		.head{
-			width: var(--head-width);
-			text-align: center;
-		}
-		#body-1{
+		#header{
 			position: relative;
-			border-collapse: collapse;
-			top: var(--body-1-top);
-			left: var(--body-1-left);
+			top: -2px;
+			width: 100%;
 		}
-		.body-1{
+		#header, #body-1, #body-2, #body-3{
 			text-align: center;
-			width: var(--body-1-width);
 		}
-		.body-1-padding{
-			width: var(--body-1-padding-width);
+		.header-data{
+			line-height: 35px;
 		}
-		.head{
-			line-height: var(--head-line);
-		}
-		#head, .head{
+		#body-1, #body-2, #body-3{
 			position: relative;
-			border-collapse: collapse;
+			width: 100%;
 		}
-		.icon{
-			height: var(--icon-height);
+		#spacing-data{
+			width: 650px;
+			height: 5px;
 		}
-		.icon-end{
-			height: var(--icon-end-height);
+		.socialab-data{
+			width: 263px;
 		}
-		#body-2{
-			position: relative;
-			border-collapse: collapse;
-			left: var(--body-2-left);
-			top: var(--body-2-top);
-		}
-		.body-2{
-			text-align: center;
-			width: var(--body-2-width);
-		}		
-		.body-2-padding{
-			width: var(--body-2-padding-width);
-		}
-		.box{
-			z-index: 2;
-			position: absolute;
-			height: var(--box-height);
-			width: var(--box-width);
-		}
-		#box-1{
-			top: var(--box-1-top);
-			left: var(--box-1-left);
-			border-right: 1px solid red;
-			border-bottom: 1px solid red;
-		}
-		#box-2{
-			top: var(--box-2-top);
-			left: var(--box-2-left);
-			border-left: 1px solid red;
-			border-bottom: 1px solid red;
-		}
-		#box-3{
-			top: var(--box-3-top);
-			left: var(--box-3-left);
-			border-top: 1px solid red;
-			border-left: 1px solid red;
-		}
-		#box-4{
-			top: var(--box-4-top);
-			left: var(--box-4-left);
-			border-top: 1px solid red;
-			border-right: 1px solid red;
-		}
-		.head-name, .head-name-icon, .name-padding{
-			text-align: center;
-		}
-		#track-name, .img-chile{
-			position: relative;
-			top: var(--name-top)
-		}
-		.head-name-icon{
-			width: var(--head-name-icon-width);
-			height: var(--head-name-icon-height);
-		}
-		.img-chile{
-			width: var(--name-img-width);
-		}
-		#track-name{
-			width: var(--name-width);
-		}
-		.name-padding{
-			width: var(--name-padding-width);
-		}
-		#super-usuario{
-			position: absolute;
-			text-align: center;
-			width: var(--super-width);
-			height: var(--super-height);
-			top: var(--super-top);
-			left: var(--super-left);
-			z-index: 9;
-			color: black;
-			font-size: 15px;
+		.socialab{
+			width: 150px;
 		}
 		.icon-social{
-			width: var(--icon-social-width);
+			width: 60px;
 		}
+		.data-text{
+			font-size: 13px;
+		}
+		.body-1-spacing{
+			width: 70px;
+		}
+		.body-2-spacing, .body-3-spacing{
+			width: 70px;
+		}
+		.body-3-data{
+			height: 100px;
+		}
+		#middle{
+			position: absolute;
+			width: var(--width);
+			height: var(--height);
+			top: var(--margin);
+			left: var(--margin);
+			background-color: white;
+			z-index: 3;
+		}
+		.box{
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			z-index: 2;
+		}
+		#box-1{
+			top: 27px;
+			left: 27px;
+			border-right: 2px solid red;
+			border-bottom: 2px solid red;
+		}
+		#box-2{
+			top: 27px;
+			left: 1009px;
+			border-left: 2px solid red;
+			border-bottom: 2px solid red;
+		}
+		#box-3{
+			top: 683px;
+			left: 1009px;
+			border-top: 2px solid red;
+			border-left: 2px solid red;
+		}
+		#box-4{
+			top: 683px;
+			left: 27px;
+			border-right: 2px solid red;
+			border-top: 2px solid red;
+		}	
+
 	</style>
-	<h4 id="super-usuario">
-		USUARIO DE EJEMPLO
-	</h4>
 	<div id="out">
+		<div id="middle"></div>
 		<div id="in">
-			<div id="certificate">
-				<div id="banner-side">
-					<img src="./img/banner.png" style="width: 226px">
-				</div>
-				<table id="certificate-detail">
-					<table id="head">
-						<tr>
-							<td class="head" colspan="5">Otorgado a:</td>
-						</tr>
-						<tr>
-							<td class="name-padding"></td>
-							<td class="head-name-icon" style="text-align: right !important;">
-								<img src="./img/misselanius.png" class="img-chile" alt="">
-							</td>
-							<td class="head-name">
-								<img src="./img/track_name.png" id="track-name" alt="">
-							</td>
-							<td class="head-name-icon" style="text-align: left !important">
-								<img src="./img/misselanius.png" class="img-chile" alt="">
-							</td>
-							<td class="name-padding"></td>
-						</tr>
-						<tr>
-							<td class="head" colspan="5">Por completar con éxito</td>
-						</tr>
-						<tr>
-							<td class="head" colspan="5">
-								<h3 style="color: #DFB052;font-family: 'Arial Black';font-size: 19px">LA COLECCIÓN DE INNOVACIÓN SOCIAL:</h3>
-							</td>
-						</tr>
-					</table>
-					<table id="body-1">
-						<tr>
-							<td class="body-1-padding"></td>
-							<td class="body-1 icon">
-								<img src="./img/group.png" class="icon-social" alt="">
-							</td>
-							<td class="body-1 icon">
-								<img src="./img/idea.png" class="icon-social" alt="">
-							</td>
-							<td class="body-1 icon">
-								<img src="./img/question.png" class="icon-social" alt="">
-							</td>
-							<td class="body-1-padding"></td>
-						</tr>
-						<tr>
-							<td class="body-1-padding"></td>
-							<td class="body-1">
-								<p>Colaboración</p>
-								<p>para la</p>
-								<p>transformación.</p>
-							</td>
-							<td class="body-1">
-								<p>Desde una idea</p>
-								<p>a un emprendimiento</p>
-								<p>con impacto.</p>
-							</td>
-							<td class="body-1">
-								<p>¿Qué es y</p>
-								<p>como ser una</p>
-								<p>empresa B?</p>
-							</td>
-							<td class="body-1-padding"></td>
-						</tr>
-					</table>
-					<table id="body-2">
-						<tr>
-							<td style="height: 20px"></td>
-						</tr>
-						<tr>
-							<td class="body-2-padding"></td>
-							<td class="body-2 icon" style="text-align: center !important;">
-								<img src="./img/impact.png" class="icon-social" alt="">
-							</td>
-							<td class="body-2 icon">
-								<img src="./img/company.png" class="icon-social" alt="">
-							</td>
-							<td class="body-2-padding"></td>
-						</tr>
-						<tr>
-							<td class="body-2-padding"></td>
-							<td class="body-2">
-								<p>Generando</p>
-								<p>un movimiento</p>
-								<p>con impacto.</p>
-							</td>
-							<td class="body-2">
-								<p>Desde el modelo</p>
-								<p>tradicional a</p>
-								<p>una empresa</p>
-								<p>con sentido.</p>
-							</td>
-							<td class="body-2-padding"></td>
-						</tr>
-						<tr>
-							<td class="body-2-padding"></td>
-							<td class="body-2 icon-end">Firma</td>
-							<td class="body-2 icon-end">
-								<img src="./img/socialab.png" style="padding-bottom: 10px;padding-left: 20px;" alt="">
-							</td>
-							<td class="body-2-padding"></td>
-						</tr>
-					</table>
+			<div id="banner">
+				<img src="./img/banner.png" width="250">
+			</div>
+			<div id="certificado">
+				<table id="header">
+					<tr class="header-row">
+						<td class="header-data">Otorgado a:</td>
+					</tr>
+					<tr class="header-row">
+						<td class="header-data">--</td>
+					</tr>
+					<tr class="header-row">
+						<td class="header-data">Por completar con éxito</td>
+					</tr>
+					<tr class="header-row">
+						<td class="header-data">LA COLECCIÓN DE INNOVACIÓN SOCIAL:</td>
+					</tr>
+				</table>
+				<table id="body-1">
+					<tr class="body-1-row">
+						<td class="body-1-data body-1-spacing"></td>
+						<td class="body-1-data data-img">
+							<img src="./img/group.png" class="icon-social" alt="">
+						</td>
+						<td class="body-1-data data-img">
+							<img src="./img/idea.png" class="icon-social" alt="">
+						</td>
+						<td class="body-1-data data-img">
+							<img src="./img/question.png" class="icon-social" alt="">
+						</td>
+						<td class="body-1-data body-1-spacing"></td>
+					</tr>
+					<tr class="body-1-row">
+						<td class="body-1-data body-1-spacing"></td>
+						<td class="body-1-data data-text">
+							Colaboración</br>
+							para la</br>
+							transformación.</br>
+						</td>
+						<td class="body-1-data data-text">
+							Desde una idea </br>
+							a un emprendimiento</br>
+							con impacto.</br>
+						</td>
+						<td class="body-1-data data-text">
+							¿Qué es y</br>
+							cómo ser una</br>
+							empresa B?</br>
+						</td>
+						<td class="body-1-data body-1-spacing"></td>
+					</tr>
+				</table>
+				<table id="spacing">
+					<tr id="spacing-row">
+						<td id="spacing-data"></td>
+					</tr>
+				</table>
+				<table id="body-2">
+					<tr class="body-2-row">
+						<td class="body-2-data body-2-spacing"></td>
+						<td class="body-2-data data-img">
+							<img src="./img/impact.png" class="icon-social">
+						</td>
+						<td class="body-2-data data-img">
+							<img src="./img/company.png" class="icon-social" alt="">
+						</td>
+						<td class="body-2-data body-2-spacing"></td>
+					</tr>
+					<tr class="body-2-row">
+						<td class="body-2-data body-2-spacing"></td>
+						<td class="body-2-data data-text">
+							Generando</br>
+							un movimiento</br>
+							con impacto.</br>
+						</td>
+						<td class="body-2-data data-text">
+							Desde el modelo</br>
+							tradicional a</br>
+							una empresa</br>
+							con sentido.</br>
+						</td>
+						<td class="body-2-data body-2-spacing"></td>
+					</tr>
+				</table>
+				<table id="body-3">
+					<tr class="body-3-row">
+						<td class="body-3-data body-3-spacing"></td>
+						<td class="body-3-data data-img">FIRMA</td>
+						<td class="body-3-data data-img socialab-data">
+							<img src="./img/socialab.png" class="socialab" alt="">
+						</td>
+						<td class="body-3-data body-3-spacing"></td>
+					</tr>
 				</table>
 			</div>
 		</div>
-		<div id="box-1" class="box"></div>
-		<div id="box-2" class="box"></div>
-		<div id="box-3" class="box"></div>
-		<div id="box-4" class="box"></div>
 	</div>
+	<div id="box-1" class="box"></div>
+	<div id="box-2" class="box"></div>
+	<div id="box-3" class="box"></div>
+	<div id="box-4" class="box"></div>
 </body>
 </html>
