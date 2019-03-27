@@ -126,9 +126,29 @@
 			left: 27px;
 			border-right: 2px solid red;
 			border-top: 2px solid red;
-		}	
+		}
+		.img-user{
+			width: 30px;
+			text-align: center;
+			margin-top: 7px;
+		}
+		.name-spacing{
+			width: 60px;
+		}
+		#track-name{
+			width: 400px;
+		}
+		#nombre-usuario{
+			display: inline;
+			position: absolute;
+			z-index: 99;
+			font-family: 'Century Gothic';
+			top: 140px;
+			left: 612px;
+		}
 
 	</style>
+	<h3 id="nombre-usuario">Nombre Usuario</h3>
 	<div id="out">
 		<div id="middle"></div>
 		<div id="in">
@@ -138,16 +158,28 @@
 			<div id="certificado">
 				<table id="header">
 					<tr class="header-row">
-						<td class="header-data">Otorgado a:</td>
+						<td class="header-data" colspan="5">Otorgado a:</td>
 					</tr>
 					<tr class="header-row">
-						<td class="header-data">--</td>
+						<td class="name-spacing"></td>
+						<td class="header-data">
+							<img src="img/misselanius.png" class="img-user" alt="">
+						</td>
+						<td class="header-data">
+							<img src="img/track_name.png" id="track-name">
+						</td>
+						<td class="header-data">
+							<img src="img/misselanius.png" alt="" class="img-user">
+						</td>
+						<td class="name-spacing"></td>
 					</tr>
 					<tr class="header-row">
-						<td class="header-data">Por completar con éxito</td>
+						<td class="header-data" colspan="5">Por completar con éxito</td>
 					</tr>
 					<tr class="header-row">
-						<td class="header-data">LA COLECCIÓN DE INNOVACIÓN SOCIAL:</td>
+						<td class="header-data" colspan="5">
+							<h3 style="line-height: 3px;font-family: 'Arial Black';font-size: 25px;margin-top: 7px;color: #EBB051">LA COLECCIÓN DE INNOVACIÓN SOCIAL:</h3>
+						</td>
 					</tr>
 				</table>
 				<table id="body-1">
